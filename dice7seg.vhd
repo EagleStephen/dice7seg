@@ -1,9 +1,3 @@
--- Ex1 Solution : dice7seg.vhd
--- -------------------------------------------
---  Seven Seg Encoder for Dice Game
--- -------------------------------------------
--- (c) ALSE - http://www.alse-fr.com
---
 -- Notes :
 --  * We don't ask for complete decoder, only 1..6
 --  * Order is : Segout(0)=Seg_A, ... Segout(6)=Seg_G
@@ -39,7 +33,7 @@ begin
 
   process(BCD)
   begin
-    case BCD is              --abcdefg
+    case BCD is              --abcdefg       Use the display's segements to create numbers 
       when "000" => SevSeg <= "1111110";
       when "001" => SevSeg <= "0110000";
       when "010" => SevSeg <= "1101101";
